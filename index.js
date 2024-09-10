@@ -13,7 +13,7 @@ const password = process.env.MONGODB_PASSWORD;
 const dbName = "registrationFormDB";
 
 mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.lhpei.mongodb.net/${dbName}?retryWrites=true&w=majority&appName=Cluster0`, {
-    serverSelectionTimeoutMS: 5000, 
+    serverSelectionTimeoutMS: 50000, 
 });
 
 const registrationSchema = new mongoose.Schema({
